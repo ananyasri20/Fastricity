@@ -52,20 +52,31 @@ nav {
 }
 nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.08); }
 
-/* Logo image in navbar */
+
+/* Logo container in navbar */
 .nav-logo {
-  display: flex; align-items: center; gap: 10px;
-  cursor: pointer; height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  cursor: pointer;
 }
+
+/* Logo image – keep it original */
 .nav-logo img {
   height: 44px;
   width: auto;
   object-fit: contain;
-  /* The logo has a black background — invert to show on white nav */
-  filter: invert(1) brightness(2) contrast(1.2);
-  transition: filter var(--transition);
+
+  /* NO filters, NO effects */
+  filter: none;
+  transition: none;
 }
-.nav-logo:hover img { filter: invert(1) brightness(1.8) sepia(1) hue-rotate(90deg) saturate(5); }
+
+/* Remove hover effects completely */
+.nav-logo:hover img {
+  filter: none;
+}
 
 .nav-links { display: flex; align-items: center; gap: 6px; margin-left: auto; }
 .nav-links a {
